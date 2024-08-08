@@ -2,18 +2,18 @@
 #include<stdlib.h>
 #include<string.h>
 
-char ch, str[100], sen[100];
+char ch, str[100], sen[4];
 
 int main()
 {
     printf("Take a character!: ");
-    scanf("%c%*c", &ch);
+    scanf("%c", &ch);
 
     printf("Take a string!: ");
-    scanf("%99s%*c", str);
+    scanf("%100[^\n]%*c", str);
 
     printf("Take a sentence!: ");
-    scanf("%99[^\n]%*c", sen);
+    scanf("%100[^\n]%*c", sen);
 
     printf("\nCharacter: %c\nString: %s\nSentence: %s", ch, str, sen);
 
