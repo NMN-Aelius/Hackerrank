@@ -2,6 +2,39 @@
 #include<stdlib.h>
 #include<string.h>
 
+void swapvalue(char **value, char **valpos)
+{
+    char *ptr;
+
+    ptr = *valpos;
+    *valpos = *value;
+    *value = ptr;
+}
+
+void bubblesort(char **s, int n)
+{
+    for(int i = 0; i < n-1; i++)
+    {
+        for(int j = i+1; j < n; j++)
+        {
+            if(strcmp(s[i], s[j]) >0)
+            {
+                swapvalue(&s[i], &s[j]);
+            }
+        }
+    }
+}
+
+int check_permutation(int num, char **s)
+{
+    // we have n times to run
+    for(int i=0; i< num-1; i++)
+    {
+
+    }
+    // the final loop is to print result
+}
+
 int main()
 {
     char **s; //double pointer
@@ -22,9 +55,14 @@ int main()
         scanf("%s", s[i]);
     }
 
+    // Sort string first using bubble sort (DSA apply)
+    bubblesort(s, n);
+    for (int i = 0; i < n; i++)
+        printf("%s ",s[i]);
+
     //NOW, the main point in create a permutation line to print out terminal
     //this idea is following to "DO-WHILE" loop.
-
+    
     do
     {
         for(int i=0;i<n;i++)
