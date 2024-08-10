@@ -30,7 +30,7 @@ int check_permutation(int num, char **s)
     // we have n times to run
     for(int i=0; i< num-1; i++)
     {
-
+        
     }
     // the final loop is to print result
 }
