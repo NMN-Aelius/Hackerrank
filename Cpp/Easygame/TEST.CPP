@@ -5,16 +5,11 @@
 using namespace std;
 int main()
 {
-    string str;
-    getline(cin,str);
-    
-    stringstream ss(str);
-    string sword;
-    int dem = 0;
-    while (ss >> sword)
-    {
-        ++dem;
-        cout << "STT " << dem << " Word: " << sword << endl;
-    } // slip word until it doesnt have any ones.
+    string food = "pizza";
+    string &meal = food;
+
+    meal = "chicken";
+
+    cout<< food;
     return 0;
 }
